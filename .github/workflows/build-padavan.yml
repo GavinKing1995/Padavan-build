@@ -36,7 +36,6 @@ jobs:
         git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
-        nano /opt/rt-n56u/trunk/configs/templates/PSG1218.config
         ./build_firmware_modify PSG1218
     - name: Build Firmware
       env:
