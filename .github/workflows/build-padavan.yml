@@ -36,11 +36,11 @@ jobs:
         git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
+        mkdir -p /opt/images/
     - name: Build Firmware
       run: |
         cd /opt/rt-n56u/trunk
         sudo ./build_firmware_modify K2P
-        mkdir /opt/images/
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
       uses: actions/upload-artifact@master
